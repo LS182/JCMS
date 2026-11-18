@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <!-- Permits cleartext HTTP communication with local development server -->
+    <domain-config cleartextTrafficPermitted="true">
+        <!-- Android Emulator alias for development host loopback -->
+        <domain includeSubdomains="false">10.0.2.2</domain>
+    </domain-config>
+</network-security-config>

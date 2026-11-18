@@ -1,0 +1,52 @@
+<resources>
+    <string name="app_name">JCMS</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_sessions">Sessions</string>
+    <string name="title_members">Members</string>
+    <string name="title_attendance">Attendance</string>
+    
+    <!-- Dashboard Stats -->
+    <string name="stat_total_members">Total Members</string>
+    <string name="stat_upcoming_sessions">Upcoming Sessions</string>
+    <string name="stat_active_registrations">Active Bookings</string>
+    <string name="section_categories">Session Categories</string>
+    <string name="section_upcoming_sessions">Next Upcoming Sessions</string>
+    
+    <!-- Actions -->
+    <string name="action_create_session">New Session</string>
+    <string name="action_edit_session">Edit Session</string>
+    <string name="action_delete_session">Delete Session</string>
+    <string name="action_register_member">Add Member</string>
+    <string name="action_edit_member">Edit Member</string>
+    <string name="action_book_session">Book Member</string>
+    <string name="action_cancel_registration">Cancel Booking</string>
+    <string name="action_mark_attendance">Mark Attendance</string>
+    <string name="action_refresh">Refresh</string>
+    <string name="action_save">Save</string>
+    <string name="action_cancel">Cancel</string>
+    
+    <!-- Filters & Search -->
+    <string name="all_categories">All Categories</string>
+    <string name="all_statuses">All Statuses</string>
+    <string name="search_members_hint">Search members by name or email…</string>
+    
+    <!-- Labels -->
+    <string name="label_session_details">Session Information</string>
+    <string name="label_participants">Confirmed Participants</string>
+    <string name="label_member_details">Member Details</string>
+    <string name="label_emergency_contact">Emergency Contact</string>
+    <string name="label_registration_history">Registration History</string>
+    <string name="label_notes">Notes (optional)</string>
+    
+    <!-- Attendance -->
+    <string name="status_present">PRESENT</string>
+    <string name="status_absent">ABSENT</string>
+    <string name="status_late">LATE</string>
+    
+    <!-- Common Empty & Error -->
+    <string name="empty_sessions">No jogging sessions found</string>
+    <string name="empty_members">No club members found</string>
+    <string name="empty_registrations">No registrations yet</string>
+    <string name="empty_history">No registration history</string>
+    <string name="error_loading">Failed to load data. Please retry.</string>
+</resources>

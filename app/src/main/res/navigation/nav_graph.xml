@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/nav_dashboard">
+
+    <fragment
+        android:id="@+id/nav_dashboard"
+        android:name="za.co.jcms.app.ui.dashboard.DashboardFragment"
+        android:label="Dashboard"
+        tools:layout="@layout/fragment_dashboard">
+        <action
+            android:id="@+id/action_dashboard_to_sessionDetail"
+            app:destination="@id/sessionDetailFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_dashboard_to_sessions"
+            app:destination="@id/nav_sessions"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_dashboard_to_members"
+            app:destination="@id/nav_members"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_sessions"
+        android:name="za.co.jcms.app.ui.sessions.SessionsFragment"
+        android:label="Sessions Management"
+        tools:layout="@layout/fragment_sessions">
+        <action
+            android:id="@+id/action_sessions_to_sessionDetail"
+            app:destination="@id/sessionDetailFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_members"
+        android:name="za.co.jcms.app.ui.members.MembersFragment"
+        android:label="Members Management"
+        tools:layout="@layout/fragment_members">
+        <action
+            android:id="@+id/action_members_to_memberDetail"
+            app:destination="@id/memberDetailFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/sessionDetailFragment"
+        android:name="za.co.jcms.app.ui.sessions.SessionDetailFragment"
+        android:label="Session Details"
+        tools:layout="@layout/fragment_session_detail">
+        <argument
+            android:name="sessionId"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_sessionDetail_to_attendance"
+            app:destination="@id/attendanceFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/memberDetailFragment"
+        android:name="za.co.jcms.app.ui.members.MemberDetailFragment"
+        android:label="Member Details"
+        tools:layout="@layout/fragment_member_detail">
+        <argument
+            android:name="memberId"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_memberDetail_to_sessionDetail"
+            app:destination="@id/sessionDetailFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/attendanceFragment"
+        android:name="za.co.jcms.app.ui.attendance.AttendanceFragment"
+        android:label="Session Attendance"
+        tools:layout="@layout/fragment_attendance">
+        <argument
+            android:name="sessionId"
+            app:argType="integer" />
+        <argument
+            android:name="sessionName"
+            android:defaultValue=""
+            app:argType="string" />
+    </fragment>
+
+</navigation>
